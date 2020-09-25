@@ -24,7 +24,15 @@ Author     : samuelson
             </div>
             <div>
                 <br>
-                <input type="checkbox" name="">
+                <input type="checkbox" name="ckbxSumar">Sumar valores
+                <br>
+                <input type="checkbox" name="ckbxMultiplicar">Multiplicar Valores
+                <br>
+                <input type="checkbox" name="ckbxMayor">Encontrar Mayor
+                <br>
+                <input type="checkbox" name="ckbxPotencia">Elevar 
+                <br>
+                <input type="checkbox" name="ckbxBinario">Valor binario
             </div>
             <div>
                 <br>
