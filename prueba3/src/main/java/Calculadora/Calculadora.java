@@ -33,21 +33,16 @@ public class Calculadora {
         return (int)Math.pow(primero, segundo);
     }
     
-    public String binario(int numero){
-   ArrayList<String> binario = new ArrayList<>();
-   int residuo;
-   String resultado = "";
-
-   do{
-      residuo = numero%2;
-      numero = numero/2;
-      binario.add(0, Integer.toString(residuo));
-   }while(numero > 2);
-   
-   binario.add(0, Integer.toString(numero));
-   for(int i = 0; i < binario.size(); i++){
-       resultado += binario.get(i);
-   }
-   return resultado;
- }
+    public String binario(int valor) {
+	if (valor <= 0) {
+		return "0";
+	}
+	StringBuilder binario = new StringBuilder();
+	while (valor > 0) {
+		int residuo = (int) (valor % 2);
+		valor = valor / 2;
+		binario.insert(0, String.valueOf(residuo));
+	}
+	return binario.toString();
+}
 }
