@@ -14,7 +14,7 @@ Author     : samuelson
     </head>
     <body>
         <h1>Calculadora!</h1>
-        <form name = "form1" action="controlador.jsp" method ="POST">
+        <form name = "form1" action="controlador.jsp"  method ="POST">
             <input type="number" name="texto1" ><br>
             <input type="number" name="texto2" ><br>
             <br><input type="checkbox" name="check1" >Sumar valores<br>
@@ -23,18 +23,7 @@ Author     : samuelson
             <br><input type="checkbox" name="check4" >Elevar<br>
             <br><input type="checkbox" name="check5" >Binario<br>
             
-            <input type="submit" >
+            <input type="submit" onclick = "validar()" >
         </form>
     </body>
-    <script>
-
-        function validar() {
-            var valor1 = document.forms["form1"]["primerValor"].value;
-            var valor2 = document.forms["form1"]["segundoValor"].value;
-            if (valor1 === "" || valor2 === "" || valor1.length === 0) {
-                alert("Parece que olvidaste algo");
-                return false;
-            }
-        }
-    </script>
 </html>

@@ -29,8 +29,16 @@ public class ManagerHtml {
             Logger.getLogger(ManagerHtml.class.getName()).log(Level.SEVERE, null, ex);
         }
         if (request.getParameter("texto1") != null && request.getParameter("texto2") != null){
-            int first = Integer.parseInt(request.getParameter("texto1"));
-            int second = Integer.parseInt(request.getParameter("texto2"));
+            String valor1 = request.getParameter("texto1");
+            String valor2 = request.getParameter("texto2");
+            if (valor1.isBlank()) {
+                valor1 = "0";
+            }
+            if (valor2.isBlank()) {
+                valor2 = "0";
+            }
+            int first = Integer.parseInt(valor1);
+            int second = Integer.parseInt(valor2);
             Calculadora calculadora = new Calculadora();
             
             if (request.getParameter("check1") != null) {
@@ -47,7 +55,7 @@ public class ManagerHtml {
             }
             if (request.getParameter("check5") != null) {
                 resultados.add("Binario1: "+calculadora.binario(first));
-                resultados.add("Binario2: "+calculadora.binario(first));
+                resultados.add("Binario2: "+calculadora.binario(second));
             }
         }
         if (resultados.isEmpty()) {
